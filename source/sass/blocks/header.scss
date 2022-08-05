@@ -1,0 +1,55 @@
+.header {
+  position: fixed;
+
+  width: 100%;
+
+  background-image: $black-to-top;
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 10px 60px 20px 0;
+  }
+
+  a {
+    display: block;
+
+    margin: 20px 160px 10px 0;
+
+    & > svg {
+      margin: 0 15px 0 0;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 120px;
+    row-gap: 10px;
+
+    max-width: 480px;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    & + a {
+      min-width: 160px;
+      margin: 0 0 0 auto;
+    }
+  }
+
+  li {
+    & > a {
+      display: flex;
+      align-items: center;
+
+      margin: 0;
+
+      line-height: 18px;
+      color: $color-alice-blue;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Интернет-магазин электронных комплектующих Smart Device">
+    <title>Главная страница интернет-магазина Smart Device</title>
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <a>
+            <picture>
+              <source type="image/webp" srcset="img/content/logo@1x.webp, img/content/logo@2x.webp 2x">
+              <!-- 1х: 215px; 2x: 430px -->
+              <img src="img/content/logo@1x.jpg" srcset="img/content/logo@2x.jpg 2x" width="215" height="55" alt="Логотип магазина «Smart Device» - голубое символичное изображение мозга и белая надпись: Smart Device умные технологии.">
+            </picture>
+          </a>
+          <ul>
+            <li>
+              <a href="mailto:info@sd.ru">
+                <svg width="21" height="20" role="img" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#email"></use>
+                </svg>
+                <span class="hidetablet">info@sd.ru</span>
+              </a>
+            </li>
+            <li>
+              <a href="+74950005252">
+                <svg width="21" height="20" role="img" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#tel"></use>
+                </svg>
+                <span class="hidetablet">+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn--transparent">Заказать звонок</a>
+        </div>
+      </header>
+      <main>
+        <section class="intro">
+          <div class="container">
+
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="container"></div>
+      </footer>
+    </div>
+
+    <!-- Модалки -->
+    <div class="modal modal--preload" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Обычная модалка</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15">
+              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
