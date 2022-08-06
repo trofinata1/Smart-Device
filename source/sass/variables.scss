@@ -5,7 +5,7 @@
 
 $color-default-black:               #000000;
 $color-default-white:               #ffffff;
-$color-transparent:                 rgba(255, 255, 255, 0);
+$color-transparent:                 rgba(255, 255, 255, 0.7);
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
@@ -15,11 +15,15 @@ $color-torch-red:                   #ff1553;
 $color-deep-sky-blue:               #00b2ff;
 $color-alice-blue:                  #f2f5f7;
 $color-black-pearl:                 #041827;
+$color-alice-blue-transparent:      rgba(248, 253, 255, 0.7);
 
 // Outline
 
 $outline-alice-blue:                  1px solid $color-alice-blue;
 $outline-deep-sky-blue:               1px solid $color-deep-sky-blue;
+
+// Border
+$border-alice-blue-transparent:       1px solid $color-alice-blue-transparent;
 
 // Gradient
 

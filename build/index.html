@@ -14,12 +14,15 @@
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <a>
+          <a aria-label="Логотип магазина «Smart Device» - голубое символичное изображение мозга и белая надпись: Smart Device умные технологии.">
             <picture>
               <source type="image/webp" srcset="img/content/logo@1x.webp, img/content/logo@2x.webp 2x">
               <!-- 1х: 215px; 2x: 430px -->
-              <img src="img/content/logo@1x.jpg" srcset="img/content/logo@2x.jpg 2x" width="215" height="55" alt="Логотип магазина «Smart Device» - голубое символичное изображение мозга и белая надпись: Smart Device умные технологии.">
+              <img class="hidemobile" src="img/content/logo@1x.jpg" srcset="img/content/logo@2x.jpg 2x" width="215" height="55" alt=".">
             </picture>
+            <svg class="showmobile" width="35" height="35" role="img" focusable="false" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#logo"></use>
+            </svg>
           </a>
           <ul>
             <li>
@@ -31,7 +34,7 @@
               </a>
             </li>
             <li>
-              <a href="+74950005252">
+              <a href="tel:+74950005252">
                 <svg width="21" height="20" role="img" focusable="false" aria-hidden="true">
                   <use xlink:href="img/sprite_auto.svg#tel"></use>
                 </svg>
@@ -39,7 +42,7 @@
               </a>
             </li>
           </ul>
-          <a href="#" class="btn btn--transparent">Заказать звонок</a>
+          <a href="#" class="btn btn--transparent hidetablet">Заказать звонок</a>
         </div>
       </header>
       <main>
@@ -49,8 +52,84 @@
           </div>
         </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="container">
+          <div>
+            <a>
+              <picture>
+                <source type="image/webp" srcset="img/content/logo@1x.webp, img/content/logo@2x.webp 2x">
+                <!-- 1х: 215px; 2x: 430px -->
+                <img src="img/content/logo@1x.jpg" srcset="img/content/logo@2x.jpg 2x" width="215" height="55" alt="Логотип магазина «Smart Device» - голубое символичное изображение мозга и белая надпись: Smart Device умные технологии.">
+              </picture>
+            </a>
+            <ul class="social-list">
+              <li>
+                <a href="#" aria-label="Переход на страницу «Smart Device» в Фейсбук.">
+                  <svg width="30" height="30" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Переход на страницу «Smart Device» в Одноклассники.">
+                  <svg width="30" height="30" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Переход на страницу «Smart Device» во ВКонтакте.">
+                  <svg width="30" height="30" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <nav>
+            <h2>Разделы сайта</h2>
+            <button class="btn btn--with-js-close" type="button" aria-label="Нажать, чтобы раскрыть меню сайта.">
+              <svg width="15" height="15" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#plus"></use>
+              </svg>
+            </button>
+            <ul>
+              <li>
+                <a href="#">О Компаниии</a>
+              </li>
+              <li>
+                <a href="#">Продукты</a>
+              </li>
+              <li>
+                <a href="#">Производство печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Монтаж печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Комплектующие</a>
+              </li>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <h2>Наш офис</h2>
+            <button class="btn btn--with-js-close" type="button" aria-label="Нажать, чтобы раскрыть меню сайта.">
+              <svg width="15" height="15" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#plus"></use>
+              </svg>
+            </button>
+            <p>г. Мытищи, Олимпийский проспект, д.10</p>
+            <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+            <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+            <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+          </div>
+        </div>
       </footer>
     </div>
 

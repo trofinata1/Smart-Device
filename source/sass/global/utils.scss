@@ -80,3 +80,18 @@
   }
 }
 
+.showtablet {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.showmobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
