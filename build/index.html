@@ -7,6 +7,7 @@
     <meta name="description" content="Интернет-магазин электронных комплектующих Smart Device">
     <title>Главная страница интернет-магазина Smart Device</title>
     <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -46,9 +47,15 @@
         </div>
       </header>
       <main>
-        <section class="intro">
+        <h1 class="visually-hidden">Интернет-магазин электронных комплектующих Smart Device.</h1>
+        <section class="promo">
           <div class="container">
-
+            <h2>Печатные платы</h2>
+            <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
+            <a href="#" class="btn">
+              <p class="hidemobile">Получить бесплатную консультацию</p>
+              <p class="showmobile">Бесплатная консультация</p>
+            </a>
           </div>
         </section>
       </main>
@@ -87,13 +94,15 @@
             </ul>
           </div>
           <nav>
-            <h2>Разделы сайта</h2>
-            <button class="btn btn--with-js-close" type="button" aria-label="Нажать, чтобы раскрыть меню сайта.">
+            <h2 class="hidemobile">Разделы сайта</h2>
+            <button class="showmobile btn accordion-trigger" data-accordion="1" type="button" aria-label="Нажать, чтобы раскрыть меню с разделами.">
+              Разделы сайта
               <svg width="15" height="15" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#plus"></use>
               </svg>
+              <span aria-label="Нажать, чтобы скрыть меню с разделами."></span>
             </button>
-            <ul>
+            <ul class="accordion-trigger__content" data-accordion="1">
               <li>
                 <a href="#">О Компаниии</a>
               </li>
@@ -118,16 +127,20 @@
             </ul>
           </nav>
           <div>
-            <h2>Наш офис</h2>
-            <button class="btn btn--with-js-close" type="button" aria-label="Нажать, чтобы раскрыть меню сайта.">
+            <h2 class="hidemobile">Наш офис</h2>
+            <button class="showmobile btn accordion-trigger" data-accordion="2" type="button" aria-label="Нажать, чтобы раскрыть адрес и контакты.">
+              Наш офис
               <svg width="15" height="15" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#plus"></use>
               </svg>
+              <span aria-label="Нажать, чтобы скрыть адрес и контакты."></span>
             </button>
-            <p>г. Мытищи, Олимпийский проспект, д.10</p>
-            <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-            <a href="tel:+79253895829">+7 (925) 389-58-29</a>
-            <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+            <div class="accordion-trigger__content" data-accordion="2">
+              <p>г. Мытищи, Олимпийский проспект, д.10</p>
+              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+              <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </div>
           </div>
         </div>
       </footer>

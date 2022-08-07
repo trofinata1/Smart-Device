@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {onAccordionClick} from './modules/accordion.js';
 
 // ---------------------------------
 
@@ -12,6 +13,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  if (window.innerWidth < 768 && document.querySelector('.accordion-trigger')) {
+    const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+    const contents = document.querySelectorAll('.accordion-trigger__content');
+
+    accordionTriggers.forEach((trigger) => {
+      trigger.classList.add('accordion-trigger--with-js');
+    });
+    contents.forEach((content) => {
+      content.classList.add('accordion-trigger__content--with-js');
+    });
+
+    onAccordionClick();
+  }
+
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
