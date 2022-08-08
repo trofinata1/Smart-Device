@@ -1,0 +1,49 @@
+.about {
+  padding: 0 0 100px;
+
+  .container {
+    display: flex;
+    gap: 100px;
+
+    padding: 0;
+  }
+
+  h2 {
+    padding: 0 0 0 420px;
+  }
+}
+
+.about__date {
+  div {
+    position: relative;
+
+    width: 320px;
+    height: 150px;
+
+    background-image: url("../img/decoration/about-bg@1x.png");
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+
+  p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: 0;
+
+    font-family: $ff-roboto-condensed;
+    font-weight: 700;
+    font-size: 156px;
+    line-height: 220px;
+    color: $color-default-black;
+    text-shadow: $shadow-transparent;
+
+    background-color: $color-default-white;
+
+    mix-blend-mode: lighten;
+  }
+}

@@ -1,7 +1,7 @@
 .footer {
   color: $color-transparent;
 
-  background-color: $color-black-pearl;
+  background-color: $color-black-pearl-dark;
 
   @include vp-767 {
     font-size: 14px;
@@ -113,83 +113,6 @@
 
       border-top: $border-alice-blue-transparent;
       border-bottom: $border-alice-blue-transparent;
-    }
-
-    & > ul {
-      li:first-child,
-      li:nth-child(2),
-      li:nth-child(3),
-      li:nth-child(4) {
-        grid-column-start: 1;
-      }
-
-      li:nth-child(5),
-      li:nth-child(6),
-      li:nth-child(7) {
-        grid-column-start: 2;
-
-        @include vp-1439 {
-          grid-column-start: 1;
-        }
-      }
-
-      li:first-child {
-        grid-row-start: 1;
-      }
-
-      li:nth-child(2) {
-        @include vp-1439 {
-          grid-row-start: 2;
-        }
-      }
-
-      li:nth-child(3) {
-        @include vp-1439 {
-          grid-row-start: 3;
-        }
-      }
-
-      li:nth-child(4) {
-        @include vp-1439 {
-          grid-row-start: 4;
-        }
-      }
-
-      li:nth-child(5) {
-        grid-row-start: 1;
-
-        @include vp-1439 {
-          grid-row-start: 5;
-        }
-      }
-
-      li:nth-child(6) {
-        grid-row-start: 2;
-
-        @include vp-1439 {
-          grid-row-start: 6;
-        }
-      }
-
-      li:nth-child(7) {
-        grid-row-start: 3;
-
-        @include vp-1439 {
-          grid-row-start: 7;
-        }
-      }
-    }
-
-    li {
-      @include vp-767 {
-        min-height: 25px;
-      }
-
-      & > a {
-        @include vp-767 {
-          margin: 0;
-        }
-      }
     }
 
     & + div {

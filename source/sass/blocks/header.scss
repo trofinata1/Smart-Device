@@ -5,6 +5,8 @@
 
   background-image: $black-to-top;
 
+  z-index: 1;
+
   .container {
     display: flex;
     align-items: center;
@@ -89,7 +91,7 @@
       margin: 0;
 
       line-height: 18px;
-      color: $color-alice-blue;
+      color: $color-alice-blue-gray;
 
       @include vp-1023 {
         justify-content: center;

@@ -13,23 +13,32 @@ $color-transparent:                 rgba(255, 255, 255, 0.7);
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
 $color-deep-sky-blue:               #00b2ff;
-$color-alice-blue:                  #f2f5f7;
-$color-black-pearl:                 #041827;
+$color-alice-blue:                  #f8fdff;
+$color-alice-blue-gray:             #f2f5f7;
 $color-alice-blue-transparent:      rgba(248, 253, 255, 0.7);
+$color-black-pearl:                 #041427;
+$color-black-pearl-dark:            #041827;
+$color-whisper:                     #ebebeb;
+
 
 // Outline
 
-$outline-alice-blue:                  1px solid $color-alice-blue;
+$outline-alice-blue-gray:             1px solid $color-alice-blue-gray;
 $outline-deep-sky-blue:               1px solid $color-deep-sky-blue;
+$outline-whisper:                     1px solid $color-whisper;
 
 // Border
+$border-deep-sky-blue-wide:           5px solid $color-deep-sky-blue;
 $border-alice-blue-transparent:       1px solid $color-alice-blue-transparent;
 
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-$black-to-top:                      linear-gradient(180deg, $color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
+$black-to-top:                      linear-gradient(180deg, $color-black-pearl-dark 84.9%, rgba(4, 24, 39, 0) 100%);
 $gray-to-top:                       linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
+
+// Shadow
+$shadow-transparent:                 0 4px 4px rgba(0, 0, 0, 0.25);
 
 // Typography
 // ---------------------------------
@@ -55,6 +64,8 @@ $trans-default:                     0.3s $tf-default;
 $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
 $trans-600:                         0.6s $tf-default;
+
+$trans-matrix:                      matrix(-1, 0, 0, 1, 0, 0);
 
 // Viewports
 // ---------------------------------
