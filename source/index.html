@@ -95,18 +95,65 @@
         </section>
         <section class="about">
           <div class="container">
-            <div class="about__date">
+            <div class="about__date hidemobile">
               <div>
                 <p>2022</p>
               </div>
             </div>
-            <div>
+            <div class="about__content">
               <h2>О компании</h2>
               <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
-              <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-              <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
-              <p>Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
+              <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class="hidemobile" id="hidden-about-block">Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+              <p class="hidden">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
+              <p class="hidden">Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
+              <button class="btn btn--transparent-blue about__button" type="button">Подробнее</button>
             </div>
+          </div>
+        </section>
+        <section class="catalog">
+          <div class="container">
+            <h2>Smart Device предлагает следующие товары и услуги</h2>
+            <ul class="catalog-list">
+              <li>
+                <picture>
+                  <source type="image/webp" srcset="img/content/card1@1x.webp, img/content/card1@2x.webp 2x">
+                  <!-- 1х: 350px; 2x: 700px -->
+                  <img src="img/content/card1@1x.png" srcset="img/content/card@2x.png 2x" width="350" height="650" alt="Изображение печатной платы.">
+                </picture>
+                <a href="#">
+                  <h3>Производство печатных плат</h3>
+                  <span>
+                    &rsaquo;
+                  </span>
+                </a>
+              </li>
+              <li>
+                <picture>
+                  <source type="image/webp" srcset="img/content/card2@1x.webp, img/content/card2@2x.webp 2x">
+                  <!-- 1х: 350px; 2x: 700px -->
+                  <img src="img/content/card2@1x.png" srcset="img/content/card2@2x.png 2x" width="350" height="650" alt="Изображение печатной платы.">
+                </picture>
+                <a href="#">
+                  <h3>Монтаж печатных плат</h3>
+                  <span>
+                    &rsaquo;
+                  </span>
+                </a>
+              </li>
+              <li>
+                <picture>
+                  <source type="image/webp" srcset="img/content/card3@1x.webp, img/content/card3@2x.webp 2x">
+                  <!-- 1х: 350px; 2x: 700px -->
+                  <img src="img/content/card3@1x.png" srcset="img/content/card3@2x.png 2x" width="350" height="650" alt="Изображение печатной платы.">
+                </picture>
+                <a href="#">
+                  <h3>Комплектующие для светотехники</h3>
+                  <span>
+                    &rsaquo;
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
         </section>
       </main>

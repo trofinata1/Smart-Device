@@ -1,15 +1,88 @@
 .about {
-  padding: 0 0 100px;
+  padding: 0 0 105px;
+
+  @include vp-1023 {
+    padding: 0 0 80px;
+  }
 
   .container {
     display: flex;
-    gap: 100px;
+    gap: 90px;
 
     padding: 0;
+
+    @include vp-1439 {
+      padding: 0 32px;
+    }
+
+    @include vp-1023 {
+      gap: 20px;
+
+      padding: 0 50px 0 46px;
+    }
+
+    @include vp-767 {
+      padding: 0 25px;
+    }
   }
 
   h2 {
-    padding: 0 0 0 420px;
+    margin: 0 0 12px;
+    padding: 0;
+
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    color: $color-black-pearl-dark;
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+
+  p {
+    margin: 0 0 20px;
+
+    overflow: hidden;
+
+    @include vp-1023 {
+      margin: 0 0 18px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 16px;
+
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  button {
+    display: none;
+
+    justify-content: center;
+
+    min-width: 178px;
+    min-height: 45px;
+    margin: 20px 0 0 2px;
+
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+
+    @include vp-1023 {
+      min-height: 43px;
+      margin: 0;
+    }
+
+    @include vp-767 {
+      padding: 8px 15px 6px 15px;
+
+      min-width: 160px;
+      min-height: 33px;
+    }
   }
 }
 
@@ -17,22 +90,24 @@
   div {
     position: relative;
 
-    width: 320px;
-    height: 150px;
+    width: 160px;
+    height: 314px;
 
     background-image: url("../img/decoration/about-bg@1x.png");
     background-size: cover;
     object-fit: cover;
     background-repeat: no-repeat;
+
+    z-index: -1;
   }
 
   p {
     position: absolute;
+    left: -65px;
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 
+    width: 360px;
+    height: 270px;
     margin: 0;
 
     font-family: $ff-roboto-condensed;
@@ -42,8 +117,14 @@
     color: $color-default-black;
     text-shadow: $shadow-transparent;
 
-    background-color: $color-default-white;
+    background-color: $color-alice-blue;
 
     mix-blend-mode: lighten;
+    transform: rotate(-90deg);
+
+    @include vp-1023 {
+      left: -65px;
+      top: 5px;
+    }
   }
 }

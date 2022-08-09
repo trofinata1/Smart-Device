@@ -95,3 +95,9 @@
     display: block;
   }
 }
+
+.hidden {
+  &--with-js {
+    display: none;
+  }
+}

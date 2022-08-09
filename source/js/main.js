@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {onAccordionClick} from './modules/accordion.js';
+import {onAboutButtonClick} from './modules/hidden-blocks.js';
 
 // ---------------------------------
 
@@ -26,6 +27,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
     onAccordionClick();
   }
+
+  if (document.querySelector('.about__button')) {
+    const aboutButton = document.querySelector('.about__button');
+
+    aboutButton.classList.add('btn--with-js');
+  }
+
+  if (document.querySelector('.hidden')) {
+    const hiddenBlocks = document.querySelectorAll('.hidden');
+
+    hiddenBlocks.forEach((hiddenBlock) => {
+      hiddenBlock.classList.add('hidden--with-js');
+    });
+  }
+
+  if (window.innerWidth < 768 && document.querySelector('#hidden-about-block')) {
+    const hiddenAboutBlock = document.querySelector('#hidden-about-block');
+
+    hiddenAboutBlock.classList.add('hidden--with-js');
+    hiddenAboutBlock.classList.add('hidden');
+    hiddenAboutBlock.classList.remove('hidemobile');
+  }
+
+  onAboutButtonClick();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

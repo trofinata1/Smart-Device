@@ -9,6 +9,7 @@
   line-height: 21px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  vertical-align: middle;
   color: $color-alice-blue-gray;
 
   background-color: $color-deep-sky-blue;
@@ -54,6 +55,15 @@
     background-color: transparent;
 
     outline: $outline-deep-sky-blue;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-alice-blue;
+
+        background-color: $color-deep-sky-blue;
+      }
+    }
   }
 
   &--square {
@@ -61,6 +71,10 @@
     height: 60px;
 
     border-radius: 3px 0 0 0;
+  }
+
+  &.btn--with-js {
+    display: inline-flex;
   }
 
   &:disabled {
