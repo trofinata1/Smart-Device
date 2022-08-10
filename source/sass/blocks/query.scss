@@ -1,0 +1,33 @@
+.query {
+  position: relative;
+
+  padding: 170px 0 250px;
+
+  background-color: $color-deep-sky-blue-bright;
+
+  &::after {
+    position: absolute;
+    top: 0;
+
+
+    border: 483px solid transparent;
+    border-top: 483px solid $color-black-pearl-dark-transparent;
+    border-left: 483px solid $color-black-pearl-dark-transparent;
+
+    content: "";
+  }
+
+  .container {
+    padding: 0;
+
+    background-image: url("../img/decoration/query-bg@1x.png");
+    background-repeat: no-repeat;
+    background-size: 510px 285px;
+    background-position: 0 25%;
+  }
+
+  form {
+    max-width: 585px;
+    margin: 0 0 0 auto;
+  }
+}

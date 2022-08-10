@@ -3,11 +3,28 @@
 
   background-color: $color-black-pearl-dark;
 
+
+  @include vp-1023 {
+    padding: 55px 0 75px;
+  }
+
+  @include vp-767 {
+    padding: 48px 0 86px;
+  }
+
   .container {
     padding: 0;
 
     @include vp-1439 {
       padding: 0 32px;
+    }
+
+    @include vp-1023 {
+      padding: 0 50px;
+    }
+
+    @include vp-767 {
+      padding: 0 25px;
     }
   }
 
@@ -19,17 +36,44 @@
     font-size: 36px;
     line-height: 51px;
     color: $color-default-white;
+
+    @include vp-1023 {
+      margin: 0 0 40px;
+    }
+
+    @include vp-767 {
+      max-width: 200px;
+      margin: 0 0 30px;
+
+      font-size: 28px;
+      line-height: 39px;
+    }
   }
 
   ul {
+    position: relative;
+
     display: grid;
     grid-template-columns: repeat(auto-fill, 350px);
+    grid-template-rows: repeat(auto-fill, min(650px));
     justify-content: center;
     gap: 85px;
 
     margin: 0;
     padding: 0;
 
+    background-size: cover;
+
     list-style-type: none;
+
+    @include vp-1023 {
+      grid-template-columns: repeat(auto-fill, 670px);
+      grid-template-rows: repeat(auto-fill, min(250px));
+      gap: 30px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
   }
 }

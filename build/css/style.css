@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -819,15 +821,18 @@ button,
 }
 
 .catalog ul {
+  position: relative;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, 350px);
+  grid-template-rows: repeat(auto-fill, 650px);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   gap: 85px;
   margin: 0;
   padding: 0;
+  background-size: cover;
   list-style-type: none;
 }
 
@@ -835,6 +840,27 @@ button,
   position: relative;
   height: 650px;
   overflow-y: hidden;
+}
+
+.catalog-list li::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  color: #ffffff;
+  background-color: #00b2ff;
+  border-radius: 3px 0 0 0;
+  content: "›";
 }
 
 .catalog-list a {
@@ -854,26 +880,6 @@ button,
   font-size: 20px;
   line-height: 30px;
   color: #ffffff;
-}
-
-.catalog-list span {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  color: #ffffff;
-  background-color: #00b2ff;
-  border-radius: 3px 0 0 0;
 }
 
 .header {
@@ -995,6 +1001,34 @@ button,
 
 .features-list p {
   margin: 0;
+}
+
+.form h2 {
+  margin: 0 0 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: #ffffff;
+}
+
+.form p {
+  margin: 0 0 35px;
+  color: #ffffff;
+}
+
+.form .form__error {
+  display: none;
+}
+
+.form .form__field {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.form input {
+  width: 275px;
 }
 
 .footer {
@@ -1296,6 +1330,34 @@ button,
   letter-spacing: 0.05em;
 }
 
+.query {
+  position: relative;
+  padding: 170px 0 250px;
+  background-color: #00b2ff;
+}
+
+.query::after {
+  position: absolute;
+  top: 0;
+  border: 483px solid transparent;
+  border-top: 483px solid rgba(4, 24, 39, 0.5);
+  border-left: 483px solid rgba(4, 24, 39, 0.5);
+  content: "";
+}
+
+.query .container {
+  padding: 0;
+  background-image: url("../img/decoration/query-bg@1x.png");
+  background-repeat: no-repeat;
+  background-size: 510px 285px;
+  background-position: 0 25%;
+}
+
+.query form {
+  max-width: 585px;
+  margin: 0 0 0 auto;
+}
+
 .social-list > li {
   display: block;
   width: 40px;
@@ -1419,6 +1481,10 @@ button,
     display: none;
   }
 
+  .showtablet {
+    display: block;
+  }
+
   .container {
     padding: 0 24px;
   }
@@ -1444,6 +1510,36 @@ button,
   .about__date p {
     left: -65px;
     top: 5px;
+  }
+
+  .catalog {
+    padding: 55px 0 75px;
+  }
+
+  .catalog .container {
+    padding: 0 50px;
+  }
+
+  .catalog h2 {
+    margin: 0 0 40px;
+  }
+
+  .catalog ul {
+    grid-template-columns: repeat(auto-fill, 670px);
+    grid-template-rows: repeat(auto-fill, 250px);
+    gap: 30px;
+  }
+
+  .catalog-list li {
+    height: 250px;
+  }
+
+  .catalog-list a {
+    padding: 35px 140px 10px 43px;
+  }
+
+  .catalog-list h3 {
+    max-width: 150px;
   }
 
   .header .container {
@@ -1613,10 +1709,6 @@ button,
     display: none;
   }
 
-  .showtablet {
-    display: block;
-  }
-
   .showmobile {
     display: block;
   }
@@ -1672,6 +1764,40 @@ button,
 
   .accordion-trigger__content--with-js {
     display: none;
+  }
+
+  .catalog {
+    padding: 48px 0 86px;
+  }
+
+  .catalog .container {
+    padding: 0 25px;
+  }
+
+  .catalog h2 {
+    max-width: 200px;
+    margin: 0 0 30px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .catalog ul {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-list li::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  .catalog-list a {
+    padding: 26px 30px 10px 30px;
+  }
+
+  .catalog-list h3 {
+    max-width: 135px;
+    font-size: 18px;
   }
 
   .header .container {

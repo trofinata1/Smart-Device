@@ -1,0 +1,30 @@
+.form {
+  h2 {
+    margin: 0 0 15px;
+
+    font-family: $ff-roboto-condensed;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+
+    color: $color-default-white;
+  }
+
+  p {
+    margin: 0 0 35px;
+
+    color: $color-default-white;
+  }
+
+  .form__error {
+    display: none;
+  }
+
+  .form__field {
+    width: fit-content;
+  }
+
+  input {
+    width: 275px;
+  }
+}
