@@ -803,7 +803,7 @@ button,
 }
 
 .catalog {
-  padding: 67px 0 140px;
+  padding: 67px 0 143px;
   background-color: #041827;
 }
 
@@ -888,7 +888,7 @@ button,
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background-image: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  z-index: 1;
+  z-index: 2;
 }
 
 .header .container {
@@ -1017,18 +1017,200 @@ button,
   color: #ffffff;
 }
 
+.form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.form input {
+  width: 275px;
+  margin: 0 0 20px;
+  padding: 15px;
+}
+
+.form input[type="checkbox"] {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.form input[type="checkbox"]:checked + label::after {
+  display: block;
+}
+
+.form input[type="checkbox"] + label {
+  position: relative;
+  display: block;
+  margin: 8px 0;
+  padding: 0 0 0 26px;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.form input[type="checkbox"] + label::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin: -9px 0 0 0;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+}
+
+.form input[type="checkbox"] + label::after {
+  position: absolute;
+  top: 10px;
+  left: 3px;
+  content: "";
+  display: none;
+  width: 9px;
+  height: 6px;
+  background-image: url("../img/svg/tick.svg");
+  background-repeat: no-repeat;
+}
+
+.form input[type="checkbox"]:hover + label,
+.form input[type="checkbox"]:focus + label {
+  opacity: 0.8;
+}
+
+.form input:not(:focus):not(:placeholder-shown):invalid {
+  outline: 2px solid #ff1553;
+}
+
+.form input:not(:focus):not(:placeholder-shown):invalid ~ .form__error {
+  display: block;
+}
+
+.form textarea {
+  width: 585px;
+  height: 155px;
+  margin: 0 0 35px;
+  padding: 25px 15px 15px 15px;
+}
+
+.form input,
+.form textarea {
+  background-color: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+}
+
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.form input::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus {
+  opacity: 0.8;
+}
+
+.form input:disabled,
+.form textarea:disabled {
+  background-color: rgba(248, 253, 255, 0.7);
+}
+
+.form input:disabled:hover,
+.form input:disabled:focus,
+.form textarea:disabled:hover,
+.form textarea:disabled:focus {
+  opacity: 1;
+}
+
+.form button {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 265px;
+  height: 45px;
+  margin: 0;
+}
+
 .form .form__error {
   display: none;
+  position: absolute;
+  top: 20px;
+  left: 140px;
+  width: 70%;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 13px;
+  color: #041427;
+  background-color: #f8fdff;
+  border-radius: 3px;
+  z-index: 1;
 }
 
 .form .form__field {
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.form input {
-  width: 275px;
+.form .form__consent {
+  width: 260px;
 }
 
 .footer {
@@ -1332,29 +1514,37 @@ button,
 
 .query {
   position: relative;
-  padding: 170px 0 250px;
+  padding: 170px 0 235px;
   background-color: #00b2ff;
 }
 
 .query::after {
   position: absolute;
   top: 0;
-  border: 483px solid transparent;
-  border-top: 483px solid rgba(4, 24, 39, 0.5);
-  border-left: 483px solid rgba(4, 24, 39, 0.5);
+  border: 435px solid transparent;
+  border-top: 408px solid rgba(4, 24, 39, 0.5);
+  border-left: 534px solid rgba(4, 24, 39, 0.5);
   content: "";
+}
+
+.query::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 510px;
+  height: 285px;
+  background-image: url("../img/decoration/query-bg@1x.png");
+  background-repeat: no-repeat;
+  z-index: 1;
+  content: '';
 }
 
 .query .container {
   padding: 0;
-  background-image: url("../img/decoration/query-bg@1x.png");
-  background-repeat: no-repeat;
-  background-size: 510px 285px;
-  background-position: 0 25%;
 }
 
 .query form {
-  max-width: 585px;
+  width: 585px;
   margin: 0 0 0 auto;
 }
 

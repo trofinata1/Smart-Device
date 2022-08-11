@@ -201,24 +201,26 @@
             <form class="form" action="https://echo.htmlacademy.ru/" method="post">
               <h2>Остались вопросы? Задайте их нам!</h2>
               <p>Мы проконсультируем Вас бесплатно</p>
-              <div class="form__field">
-                <input type="text" name="name" id="name" placeholder="Имя" required>
-                <label for="name" class="visually-hidden">Укажите имя.</label>
-                <p class="form__error">В имени должны быть только буквы</p>
-              </div>
-              <div class="form__field">
-                <input type="tel" name="tel" id="tel" placeholder="Телефон" required pattern="^\+?[0-9][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$">
-                <label for="tel" class="visually-hidden">Укажите телефон.</label>
-                <p class="form__error">Укажите телефон в формате +7********* (только цифры)</p>
-              </div>
-              <div class="form__field">
-                <textarea name="question" id="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-                <label for="question" class="visually-hidden">Напишите вопрос.</label>
-              </div>
-              <button class="btn" type="submit">Задать вопрос</button>
-              <div class="form__consent">
-                <input type="checkbox" name="consent" id="consent" required>
-                <label for="consent">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</label>
+              <div>
+                <div class="form__field">
+                  <input type="text" name="name" id="name" placeholder="Имя" required pattern="[a-zA-Z]+">
+                  <label for="name" class="visually-hidden">Укажите имя.</label>
+                  <p class="form__error">В имени должны быть только латинские буквы</p>
+                </div>
+                <div class="form__field">
+                  <input type="tel" name="tel" id="tel" placeholder="Телефон" required data-phone-pattern>
+                  <label for="tel" class="visually-hidden">Укажите телефон.</label>
+                  <p class="form__error">Укажите телефон в формате +7********* (только цифры)</p>
+                </div>
+                <div class="form__field">
+                  <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+                  <label for="question" class="visually-hidden">Напишите вопрос.</label>
+                </div>
+                <button class="btn btn--black" type="submit">Задать вопрос</button>
+                <div class="form__consent">
+                  <input type="checkbox" name="consent" id="consent" required checked>
+                  <label for="consent">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+                </div>
               </div>
             </form>
           </div>
