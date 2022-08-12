@@ -1004,7 +1004,7 @@ button,
 }
 
 .form h2 {
-  margin: 0 0 15px;
+  margin: 0 0 12px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -1023,9 +1023,9 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
 }
 
 .form input {
@@ -1051,8 +1051,8 @@ button,
 .form input[type="checkbox"] + label {
   position: relative;
   display: block;
-  margin: 8px 0;
-  padding: 0 0 0 26px;
+  margin: 14px 0 0;
+  padding: 0 0 0 48px;
   font-size: 14px;
   line-height: 16px;
   color: rgba(255, 255, 255, 0.8);
@@ -1066,7 +1066,7 @@ button,
 .form input[type="checkbox"] + label::before {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 20px;
   content: "";
   width: 15px;
   height: 15px;
@@ -1077,8 +1077,8 @@ button,
 
 .form input[type="checkbox"] + label::after {
   position: absolute;
-  top: 10px;
-  left: 3px;
+  top: 11px;
+  left: 23px;
   content: "";
   display: none;
   width: 9px;
@@ -1103,8 +1103,8 @@ button,
 .form textarea {
   width: 585px;
   height: 155px;
-  margin: 0 0 35px;
-  padding: 25px 15px 15px 15px;
+  margin: 0 0 30px;
+  padding: 25px 15px 15px;
 }
 
 .form input,
@@ -1204,13 +1204,6 @@ button,
 
 .form .form__field {
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.form .form__consent {
-  width: 260px;
 }
 
 .footer {
@@ -1249,7 +1242,7 @@ button,
 
 .footer h2 {
   max-width: 480px;
-  margin: 8px 0 20px 0;
+  margin: 8px 0 22px 0;
   padding: 0 10px 0 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -1265,16 +1258,12 @@ button,
 }
 
 .footer nav {
-  margin: 0 0 0 157px;
+  margin: 0 0 0 159px;
 }
 
 .footer nav + div {
   max-width: 347px;
   margin: 0 0 0 auto;
-}
-
-.footer nav + div > h2 {
-  margin: 8px 0 20px 0;
 }
 
 .footer nav + div > a {
@@ -1514,29 +1503,30 @@ button,
 
 .query {
   position: relative;
-  padding: 170px 0 235px;
-  background-color: #00b2ff;
+  padding: 166px 0 247px;
+  background-color: #00b3ff;
 }
 
 .query::after {
   position: absolute;
   top: 0;
-  border: 435px solid transparent;
-  border-top: 408px solid rgba(4, 24, 39, 0.5);
-  border-left: 534px solid rgba(4, 24, 39, 0.5);
+  border: 442px solid transparent;
+  border-top: 400px solid rgba(4, 24, 39, 0.5);
+  border-left: 524px solid rgba(4, 24, 39, 0.5);
   content: "";
 }
 
 .query::before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 246px;
+  left: 350px;
   width: 510px;
   height: 285px;
   background-image: url("../img/decoration/query-bg@1x.png");
   background-repeat: no-repeat;
+  background-size: contain;
   z-index: 1;
-  content: '';
+  content: "";
 }
 
 .query .container {
@@ -1544,7 +1534,7 @@ button,
 }
 
 .query form {
-  width: 585px;
+  width: 592px;
   margin: 0 0 0 auto;
 }
 
@@ -1582,6 +1572,20 @@ button,
   .btn:hover,
   .btn:focus {
     opacity: 0.8;
+  }
+}
+
+@media (max-width: 1699px) {
+  .query::before {
+    left: 250px;
+    width: 510px;
+    height: 285px;
+  }
+}
+
+@media (max-width: 1499px) {
+  .query::before {
+    left: 150px;
   }
 }
 
@@ -1656,12 +1660,56 @@ button,
     -ms-grid-row: 7;
     grid-row-start: 7;
   }
+
+  .query {
+    padding: 166px 0 100px;
+  }
+
+  .query::after {
+    left: -180px;
+  }
+
+  .query .container {
+    padding: 0 32px;
+  }
 }
 
 @media (max-width: 1439px) and (max-width: 767px) {
   .accordion-trigger__content {
     margin: 0;
     padding: 0 25px 20px 25px;
+  }
+}
+
+@media (max-width: 1359px) {
+  .query::before {
+    width: 460px;
+    height: 235px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .query {
+    padding: 100px 0;
+  }
+
+  .query::after {
+    left: -360px;
+  }
+
+  .query::before {
+    left: 32px;
+  }
+}
+
+@media (max-width: 1104px) {
+  .query::after {
+    left: -460px;
+  }
+
+  .query::before {
+    width: 410px;
+    height: 185px;
   }
 }
 
@@ -1789,6 +1837,42 @@ button,
     margin: 0 0 7px;
   }
 
+  .form h2 {
+    margin: 0 0 8px;
+  }
+
+  .form p {
+    margin: 0 0 25px;
+  }
+
+  .form input {
+    width: calc((100vw - 130px) / 2);
+    padding: 15px 15px 16px 15px;
+  }
+
+  .form input[type="checkbox"] + label {
+    width: calc((100vw - 130px) / 2);
+    margin: 11px 0 0;
+    padding: 0 0 0 25px;
+  }
+
+  .form input[type="checkbox"] + label::before {
+    left: 0;
+  }
+
+  .form input[type="checkbox"] + label::after {
+    left: 3px;
+  }
+
+  .form textarea {
+    width: calc(100vw - 100px);
+    padding: 30px 15px 15px;
+  }
+
+  .form .form__field {
+    margin: 0 0 0 auto;
+  }
+
   .footer .container {
     padding: 50px 45px 70px 50px;
   }
@@ -1861,6 +1945,27 @@ button,
 
   .promo a {
     margin: 0 0 0 47px;
+  }
+
+  .query {
+    padding: 43px 0 125px;
+  }
+
+  .query::after {
+    display: none;
+  }
+
+  .query::before {
+    display: none;
+  }
+
+  .query .container {
+    padding: 0 50px;
+  }
+
+  .query form {
+    width: 100%;
+    margin: 0;
   }
 
   .social-list > li {
@@ -2034,6 +2139,57 @@ button,
     line-height: 19px;
   }
 
+  .form h2 {
+    margin: 0 0 7px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .form p {
+    margin: 0 0 34px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .form > div {
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+
+  .form input {
+    width: 100%;
+  }
+
+  .form input[type="checkbox"] + label {
+    width: 100%;
+    padding: 0 0 0 31px;
+  }
+
+  .form input[type="checkbox"] + label::before {
+    left: 4px;
+  }
+
+  .form input[type="checkbox"] + label::after {
+    left: 6px;
+  }
+
+  .form textarea {
+    width: 100%;
+    height: 180px;
+    margin: 0 0 25px;
+    padding: 24px 15px 15px;
+  }
+
+  .form button {
+    width: 100%;
+    margin: 0 0 13px;
+  }
+
+  .form .form__field {
+    width: 100%;
+  }
+
   .footer {
     font-size: 14px;
     line-height: 19px;
@@ -2076,11 +2232,6 @@ button,
     max-width: 100%;
     margin: 0;
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
-  }
-
-  .footer nav + div > h2 {
-    margin: 0 0 15px;
-    padding: 0;
   }
 
   .footer button {
@@ -2185,6 +2336,14 @@ button,
   .promo a > p {
     font-size: 14px;
     line-height: 16px;
+  }
+
+  .query {
+    padding: 47px 0 87px;
+  }
+
+  .query .container {
+    padding: 0 25px;
   }
 
   .social-list > li {

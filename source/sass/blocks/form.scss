@@ -1,6 +1,6 @@
 .form {
   h2 {
-    margin: 0 0 15px;
+    margin: 0 0 12px;
 
     font-family: $ff-roboto-condensed;
     font-weight: 400;
@@ -8,24 +8,59 @@
     line-height: 51px;
 
     color: $color-default-white;
+
+    @include vp-1023 {
+      margin: 0 0 8px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 7px;
+
+      font-size: 30px;
+      line-height: 42px;
+    }
   }
 
   p {
     margin: 0 0 35px;
 
     color: $color-default-white;
+
+    @include vp-1023 {
+      margin: 0 0 25px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 34px;
+
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   & > div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    column-gap: 30px;
+
+    @include vp-767 {
+      column-gap: 0;
+    }
   }
 
   input {
     width: 275px;
     margin: 0 0 20px;
     padding: 15px;
+
+    @include vp-1023 {
+      width: calc((100vw - 130px) / 2);
+      padding: 15px 15px 16px 15px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
 
     &[type="checkbox"] {
       position: absolute;
@@ -49,8 +84,8 @@
 
         display: block;
 
-        margin: 8px 0;
-        padding: 0 0 0 26px;
+        margin: 14px 0 0;
+        padding: 0 0 0 48px;
 
         font-size: 14px;
         line-height: 16px;
@@ -59,10 +94,21 @@
         cursor: pointer;
         user-select: none;
 
+        @include vp-1023 {
+          width: calc((100vw - 130px) / 2);
+          margin: 11px 0 0;
+          padding: 0 0 0 25px;
+        }
+
+        @include vp-767 {
+          width: 100%;
+          padding: 0 0 0 31px;
+        }
+
         &::before {
           position: absolute;
           top: 50%;
-          left: 0;
+          left: 20px;
 
           content: "";
 
@@ -72,12 +118,20 @@
 
           border: $border-default-white;
           border-radius: 2px;
+
+          @include vp-1023 {
+            left: 0;
+          }
+
+          @include vp-767 {
+            left: 4px;
+          }
         }
 
         &::after {
           position: absolute;
-          top: 10px;
-          left: 3px;
+          top: 11px;
+          left: 23px;
 
           content: "";
 
@@ -88,6 +142,14 @@
 
           background-image: url("../img/svg/tick.svg");
           background-repeat: no-repeat;
+
+          @include vp-1023 {
+            left: 3px;
+          }
+
+          @include vp-767 {
+            left: 6px;
+          }
         }
       }
 
@@ -111,8 +173,20 @@
   textarea {
     width: 585px;
     height: 155px;
-    margin: 0 0 35px;
-    padding: 25px 15px 15px 15px;
+    margin: 0 0 30px;
+    padding: 25px 15px 15px;
+
+    @include vp-1023 {
+      width: calc(100vw - 100px);
+      padding: 30px 15px 15px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      height: 180px;
+      margin: 0 0 25px;
+      padding: 24px 15px 15px;
+    }
   }
 
   input,
@@ -151,6 +225,11 @@
     width: 265px;
     height: 45px;
     margin: 0;
+
+    @include vp-767 {
+      width: 100%;
+      margin: 0 0 13px;
+    }
   }
 
   .form__error {
@@ -177,10 +256,12 @@
   .form__field {
     position: relative;
 
-    width: fit-content;
-  }
+    @include vp-1023 {
+      margin: 0 0 0 auto;
+    }
 
-  .form__consent {
-    width: 260px;
+    @include vp-767 {
+      width: 100%;
+    }
   }
 }
