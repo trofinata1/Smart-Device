@@ -431,6 +431,7 @@ html {
   line-height: 24px;
   font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -884,7 +885,7 @@ button,
 
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background-image: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -1373,51 +1374,63 @@ button,
   display: none;
 }
 
-.modal__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.modal h2 {
+  margin: 0 0 4px;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal input,
+.modal textarea,
+.modal button {
   width: 100%;
-  min-height: 100%;
-  padding: 60px 40px;
 }
 
-.modal__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.modal input {
+  padding: 15px 15px 17px;
+}
+
+.modal input[type="checkbox"] + label {
+  padding: 0 0 0 36px;
+}
+
+.modal input[type="checkbox"] + label::before {
+  left: 10px;
+}
+
+.modal input[type="checkbox"] + label::after {
+  top: 4px;
+  left: 12px;
+}
+
+.modal textarea {
+  margin: 0 0 18px;
+}
+
+.modal button {
+  margin: 0 0 8px;
+}
+
+.modal .form__field {
   width: 100%;
-  height: 100%;
-  cursor: pointer;
 }
 
-.modal__content {
-  position: relative;
-  width: 600px;
-  padding: 40px;
-  background-color: #ffffff;
-}
-
-.modal__close-btn {
+.modal .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 15px;
+  right: 15px;
   z-index: 1;
   width: 40px;
   height: 40px;
+  margin: 0;
   padding: 0;
-  background: rgba(255, 255, 255, 0.7);
+  background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.modal[data-modal="success"] .modal__content {
+  border-radius: 3px;
 }
 
 .modal--responsive .modal__content {
@@ -1447,6 +1460,46 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 146px 49px 60px 31px;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  width: 500px;
+  padding: 38px 40px 43px;
+  background-color: #00b3ff;
+}
+
+.modal__description {
+  font-size: 26px;
+  line-height: 51px;
+  color: #ffffff;
 }
 
 .promo {
@@ -1534,6 +1587,7 @@ button,
 }
 
 .query form {
+  position: relative;
   width: 592px;
   margin: 0 0 0 auto;
 }
@@ -1925,6 +1979,16 @@ button,
     margin: 0;
   }
 
+  .modal input,
+  .modal textarea,
+  .modal button {
+    width: 100%;
+  }
+
+  .modal input[type="checkbox"] + label {
+    width: 100%;
+  }
+
   .promo {
     padding: 180px 0 205px 0;
   }
@@ -2291,17 +2355,12 @@ button,
     margin: 0;
   }
 
-  .modal__wrapper {
-    padding: 60px 16px;
-  }
-
-  .modal__content {
-    width: 100%;
-    padding: 20px;
-  }
-
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .modal__wrapper {
+    padding: 60px 16px;
   }
 
   .promo {

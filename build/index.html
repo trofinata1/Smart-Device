@@ -43,7 +43,7 @@
               </a>
             </li>
           </ul>
-          <a href="#" class="btn btn--transparent hidetablet">Заказать звонок</a>
+          <a href="#" class="btn btn--transparent hidetablet" data-open-modal="feedback">Заказать звонок</a>
         </div>
       </header>
       <main>
@@ -52,7 +52,7 @@
           <div class="container">
             <h2>Печатные платы</h2>
             <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-            <a href="index.html#order" class="btn">
+            <a href="index.html#query" class="btn">
               <p class="hidemobile">Получить бесплатную консультацию</p>
               <p class="showmobile">Бесплатная консультация</p>
             </a>
@@ -196,7 +196,7 @@
             </ul>
           </div>
         </section>
-        <section class="query">
+        <section class="query" id="query">
           <div class="container">
             <form class="form" action="https://echo.htmlacademy.ru/" method="post">
               <h2>Остались вопросы? Задайте их нам!</h2>
@@ -218,7 +218,7 @@
                 </div>
                 <button class="btn btn--black" type="submit">Задать вопрос</button>
                 <div class="form__field">
-                  <input type="checkbox" name="consent" id="consent" required checked>
+                  <input type="checkbox" name="consent" id="consent" required>
                   <label for="consent">Я&nbsp;согласен на&nbsp;обработку<br>персональных данных</label>
                 </div>
               </div>
@@ -318,9 +318,33 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+            <h2>Закажите звонок</h2>
+            <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+            <div>
+              <div class="form__field">
+                <input type="text" name="name" id="name-modal" placeholder="Имя" required pattern="[a-zA-Z]+">
+                <label for="name-modal" class="visually-hidden">Укажите имя.</label>
+                <p class="form__error">В имени должны быть только латинские буквы</p>
+              </div>
+              <div class="form__field">
+                <input type="tel" name="tel" id="tel-modal" placeholder="Телефон" required data-phone-pattern>
+                <label for="tel-modal" class="visually-hidden">Укажите телефон.</label>
+                <p class="form__error">Укажите телефон в формате +7********* (только цифры)</p>
+              </div>
+              <div class="form__field">
+                <textarea name="question" id="question-modal" placeholder="Ваш вопрос"></textarea>
+                <label for="question-modal" class="visually-hidden">Напишите вопрос.</label>
+              </div>
+              <button class="btn btn--black" type="submit">Отправить</button>
+              <div class="form__field">
+                <input type="checkbox" name="consent" id="consent-modal" required>
+                <label for="consent-modal">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+              </div>
+            </div>
+          </form>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
+            <svg width="20" height="20">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>
           </button>
@@ -332,9 +356,23 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+          <p class="modal__description">Спасибо за обращение! Ждите от нас звонка в течение 15 минут</p>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="error">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Что-то пошло не так, попробуйте еще раз отправить</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="20" height="20">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>
           </button>
