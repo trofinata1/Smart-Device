@@ -9,6 +9,10 @@
       height: 250px;
     }
 
+    @include vp-767 {
+      width: 270px;
+    }
+
     &::after {
       position: absolute;
       bottom: 0;

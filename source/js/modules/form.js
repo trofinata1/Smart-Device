@@ -1,9 +1,8 @@
-import {sendData} from './api.js';
-import {onSuccessSubmit, onErrorSubmit} from './show-error-or-success.js';
+import {sendData} from './api';
+import {onSuccessSubmit, onErrorSubmit} from './show-error-or-success';
+import {form, submitButton} from './dom-nodes';
 
 const SENDING_DATA_URL = 'https://echo.htmlacademy.ru/';
-const form = document.querySelector('.form');
-const submitButton = form.querySelector('[type="submit"]');
 
 export const blockSubmitButton = () => {
   submitButton.disabled = true;
@@ -44,12 +43,5 @@ export const interactWithForm = () => {
     item.addEventListener('submit', onFormSubmit);
     item.addEventListener('reset', onFormReset);
   });
-
 };
 
-
-
-// export const interactWithForm = () => {
-//   form.addEventListener('submit', onFormSubmit);
-//   form.addEventListener('reset', onFormReset);
-// };

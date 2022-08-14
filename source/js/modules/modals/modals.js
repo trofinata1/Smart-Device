@@ -1,5 +1,6 @@
 import {ScrollLock} from '../../utils/scroll-lock';
 import {FocusLock} from '../../utils/focus-lock';
+import {focusInput} from '../../modules/dom-nodes';
 
 export class Modals {
   constructor(settings = {}) {
@@ -204,4 +205,10 @@ export class Modals {
     this._setSettings('default');
     this._enableScrolling = true;
   }
+}
+
+export function setInput() {
+  setTimeout(() => {
+    focusInput.focus();
+  }, 500);
 }

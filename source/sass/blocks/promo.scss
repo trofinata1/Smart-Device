@@ -17,6 +17,11 @@
     padding: 150px 0 190px 0;
   }
 
+  @include retina {
+    background-image: $gray-to-top,
+      url("../img/decoration/promo-bg@2x.png");
+  }
+
   .container {
     padding: 0 370px 0 125px;
 

@@ -1,5 +1,5 @@
-import {showPopup} from './popup.js';
-import {unblockSubmitButton, onFormReset} from './form.js';
+import {showPopup} from './popup';
+import {unblockSubmitButton, onFormReset} from './form';
 
 export const onSuccessSubmit = () => {
   showPopup('[data-modal="success"]');

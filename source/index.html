@@ -15,11 +15,11 @@
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <a aria-label="Логотип магазина «Smart Device» - голубое символичное изображение мозга и белая надпись: Smart Device умные технологии.">
+          <a>
             <picture>
               <source type="image/webp" srcset="img/content/logo@1x.webp, img/content/logo@2x.webp 2x">
               <!-- 1х: 215px; 2x: 430px -->
-              <img class="hidemobile" src="img/content/logo@1x.jpg" srcset="img/content/logo@2x.jpg 2x" width="215" height="55" alt=".">
+              <img class="hidemobile" src="img/content/logo@1x.png" srcset="img/content/logo@2x.png 2x" width="215" height="55" alt="Логотип магазина «Smart Device» - голубое символичное изображение мозга и белая надпись: Smart Device умные технологии.">
             </picture>
             <svg class="showmobile" width="35" height="35" role="img" focusable="false" aria-hidden="true">
               <use xlink:href="img/sprite_auto.svg#logo"></use>
@@ -103,9 +103,9 @@
             <div class="about__content">
               <h2>О компании</h2>
               <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
-              <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class="hidemobile" id="hidden-about-block">Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-              <p class="hidden">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
-              <p class="hidden">Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
+              <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class="hidemobile" id="hidden-in-about-block">Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+              <p class="is-hidden">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
+              <p class="is-hidden">Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
               <button class="btn btn--transparent-blue about__button" type="button">Подробнее</button>
             </div>
           </div>
@@ -233,7 +233,7 @@
               <picture>
                 <source type="image/webp" srcset="img/content/logo@1x.webp, img/content/logo@2x.webp 2x">
                 <!-- 1х: 215px; 2x: 430px -->
-                <img src="img/content/logo@1x.jpg" srcset="img/content/logo@2x.jpg 2x" width="215" height="55" alt="Логотип магазина «Smart Device» - голубое символичное изображение мозга и белая надпись: Smart Device умные технологии.">
+                <img src="img/content/logo@1x.png" srcset="img/content/logo@2x.png 2x" width="215" height="55" alt="Логотип магазина «Smart Device» - голубое символичное изображение мозга и белая надпись: Smart Device умные технологии.">
               </picture>
             </a>
             <ul class="social-list">
@@ -262,14 +262,14 @@
           </div>
           <nav>
             <h2 class="hidemobile">Разделы сайта</h2>
-            <button class="showmobile btn accordion-trigger" data-accordion="1" type="button" aria-label="Нажать, чтобы раскрыть меню с разделами.">
+            <button class="btn accordion-trigger" data-accordion="1" type="button" aria-label="Нажать, чтобы раскрыть меню с разделами.">
               Разделы сайта
               <svg width="15" height="15" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#plus"></use>
               </svg>
               <span aria-label="Нажать, чтобы скрыть меню с разделами."></span>
             </button>
-            <ul class="accordion-trigger__content main-nav" data-accordion="1">
+            <ul class="accordion-content main-nav" data-accordion="1">
               <li>
                 <a href="#">О Компаниии</a>
               </li>
@@ -293,16 +293,16 @@
               </li>
             </ul>
           </nav>
-          <div>
+          <div class="contacts">
             <h2 class="hidemobile">Наш офис</h2>
-            <button class="showmobile btn accordion-trigger" data-accordion="2" type="button" aria-label="Нажать, чтобы раскрыть адрес и контакты.">
+            <button class="btn accordion-trigger" data-accordion="2" type="button" aria-label="Нажать, чтобы раскрыть адрес и контакты.">
               Наш офис
               <svg width="15" height="15" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#plus"></use>
               </svg>
               <span aria-label="Нажать, чтобы скрыть адрес и контакты."></span>
             </button>
-            <div class="accordion-trigger__content" data-accordion="2">
+            <div class="accordion-content" data-accordion="2">
               <p>г. Мытищи, Олимпийский проспект, д.10</p>
               <a href="tel:+74955894050">+7 (495) 589-40-50</a>
               <a href="tel:+79253895829">+7 (925) 389-58-29</a>
@@ -314,7 +314,7 @@
     </div>
 
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" data-modal="feedback" >
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -323,7 +323,7 @@
             <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
             <div>
               <div class="form__field">
-                <input type="text" name="name" id="name-modal" placeholder="Имя" required pattern="[a-zA-Z]+">
+                <input type="text" name="name" id="name-modal" placeholder="Имя" required  pattern="[a-zA-Z]+">
                 <label for="name-modal" class="visually-hidden">Укажите имя.</label>
                 <p class="form__error">В имени должны быть только латинские буквы</p>
               </div>

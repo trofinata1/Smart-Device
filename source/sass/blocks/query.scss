@@ -64,6 +64,10 @@
 
     content: "";
 
+    @include retina {
+      background-image: url("../img/decoration/query-bg@2x.png");
+    }
+
     @include vp-1699 {
       left: 250px;
 
