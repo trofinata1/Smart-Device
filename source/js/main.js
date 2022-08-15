@@ -23,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
   addClassForButton();
   addClassForHiddenBlocks();
   addClassForHiddenInAboutBlocks();
+
   onAccordionClick();
   onAboutButtonClick();
   showTelMask();

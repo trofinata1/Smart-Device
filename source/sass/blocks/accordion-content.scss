@@ -1,5 +1,5 @@
 .accordion-content {
-  &.accordion-content--with-js {
+  &.with-js {
     @include vp-767 {
       display: none;
     }

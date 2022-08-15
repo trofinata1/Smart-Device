@@ -640,7 +640,7 @@ button,
   display: none;
 }
 
-.hidden--with-js {
+.is-hidden.with-js {
   display: none;
 }
 
@@ -706,7 +706,7 @@ button,
 .about__date p {
   position: absolute;
   left: -65px;
-  top: 0;
+  top: 5px;
   width: 360px;
   height: 270px;
   margin: 0;
@@ -741,6 +741,10 @@ button,
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -775,7 +779,7 @@ button,
   border-radius: 3px 0 0 0;
 }
 
-.btn.btn--with-js {
+.btn.with-js {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -882,6 +886,26 @@ button,
   gap: 10px;
 }
 
+.contacts a {
+  margin: 0 0 -5px 0;
+}
+
+.contacts-list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  line-height: 18px;
+  color: #f2f5f7;
+}
+
+.contacts-list svg {
+  margin: 0 15px 0 0;
+}
+
 .header {
   position: fixed;
   width: 100vw;
@@ -903,11 +927,11 @@ button,
   padding: 10px 60px 20px 0;
 }
 
-.header a {
+.header img {
   margin: 20px 160px 10px 0;
 }
 
-.header a > svg {
+.header img > svg {
   margin: 0 15px 0 0;
 }
 
@@ -921,26 +945,14 @@ button,
   column-gap: 120px;
   row-gap: 10px;
   max-width: 480px;
-  margin: 0;
+  margin: 3px 0 0 0;
   padding: 0;
   list-style-type: none;
 }
 
 .header ul + a {
   min-width: 160px;
-  margin: 0 0 0 auto;
-}
-
-.header li > a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  line-height: 18px;
-  color: #f2f5f7;
+  margin: 3px 0 0 auto;
 }
 
 .features {
@@ -983,6 +995,11 @@ button,
 .features-list li:hover h3,
 .features-list li:hover p {
   color: #f2f5f7;
+}
+
+.features-list li:nth-last-child(2) h3,
+.features-list li:last-child h3 {
+  margin: 0 0 13px 0;
 }
 
 .features-list svg {
@@ -1284,6 +1301,10 @@ button,
 
 .main-nav li {
   width: 220px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main-nav li:first-child {
@@ -1657,7 +1678,7 @@ button,
     padding: 10px 32px 20px 32px;
   }
 
-  .header a {
+  .header img {
     margin: 20px 80px 10px 0;
   }
 
@@ -1792,6 +1813,27 @@ button,
     gap: 8px;
   }
 
+  .contacts a {
+    margin: 0;
+  }
+
+  .contacts-list li {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contacts-list a {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contacts-list svg {
+    margin: 0;
+  }
+
   .header .container {
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -1799,11 +1841,11 @@ button,
     padding: 20px 70px 25px 50px;
   }
 
-  .header a {
+  .header img {
     margin: 0;
   }
 
-  .header a > svg {
+  .header img > svg {
     margin: 0;
   }
 
@@ -1813,19 +1855,6 @@ button,
     column-gap: 20px;
     max-width: 100px;
     margin: 0 0 0 auto;
-  }
-
-  .header li {
-    width: 40px;
-    height: 40px;
-  }
-
-  .header li > a {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
   }
 
   .features {
@@ -1839,6 +1868,16 @@ button,
   .features-list li {
     min-height: 360px;
     padding: 40px 45px 27px 41px;
+  }
+
+  .features-list li:nth-last-child(2) h3,
+  .features-list li:last-child h3 {
+    margin: 0 0 7px 0;
+  }
+
+  .features-list li:nth-last-child(2) svg,
+  .features-list li:last-child svg {
+    margin: 0 0 7px 0;
   }
 
   .features-list svg {
@@ -2082,21 +2121,21 @@ button,
     background-color: #f8fdff;
   }
 
-  .accordion-trigger--with-js svg {
+  .accordion-trigger.with-js svg {
     display: block;
     margin: -4px 0 0;
   }
 
-  .accordion-trigger--with-js.is-active svg {
+  .accordion-trigger.with-js.is-active svg {
     display: none;
   }
 
-  .accordion-trigger--with-js.is-active span {
+  .accordion-trigger.with-js.is-active span {
     display: block;
     margin: -6px 0 0;
   }
 
-  .accordion-content.accordion-content--with-js {
+  .accordion-content.with-js {
     display: none;
   }
 
@@ -2165,8 +2204,16 @@ button,
     padding: 10px 35px 20px 26px;
   }
 
-  .header a {
+  .header img {
     margin: 5px 0 0 0;
+  }
+
+  .header svg {
+    margin: 5px 0 0 0;
+  }
+
+  .header ul {
+    margin: -4px 0 0 auto;
   }
 
   .features {
@@ -2188,6 +2235,16 @@ button,
     width: 100%;
     min-height: auto;
     padding: 30px 30px 35px 25px;
+  }
+
+  .features-list li:nth-last-child(2) h3,
+  .features-list li:last-child h3 {
+    margin: 0 0 15px 0;
+  }
+
+  .features-list li:nth-last-child(2) svg,
+  .features-list li:last-child svg {
+    margin: 0 0 10px 0;
   }
 
   .features-list svg {

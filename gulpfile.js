@@ -124,7 +124,7 @@ const refresh = (done) => {
 
 const createWebp = () => {
   const root = '';
-  return gulp.src(`source/img/${root}**/*.{png,jpg}`)
+  return gulp.src([`source/img/${root}**/*.{png,jpg}`, '!source/img/favicon-32.png'])
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest(`source/img/${root}`));
 };

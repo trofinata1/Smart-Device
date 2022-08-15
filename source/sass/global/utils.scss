@@ -96,8 +96,8 @@
   }
 }
 
-.hidden {
-  &--with-js {
+.is-hidden {
+  &.with-js {
     display: none;
   }
 }

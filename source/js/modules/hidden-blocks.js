@@ -7,12 +7,12 @@ export const onAboutButtonClick = () => {
 
     aboutBlocks.forEach((item) => {
       aboutButton.addEventListener('click', function () {
-        if (item.classList.contains('is-hidden--with-js')) {
-          item.classList.remove('is-hidden--with-js');
+        if (item.classList.contains('is-hidden', 'with-js')) {
+          item.classList.remove('is-hidden', 'with-js');
           aboutButton.textContent = 'Свернуть';
           aboutButton.blur();
         } else {
-          item.classList.add('is-hidden--with-js');
+          item.classList.add('is-hidden', 'with-js');
           aboutButton.textContent = 'Подробнее';
           aboutButton.blur();
         }

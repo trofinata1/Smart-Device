@@ -2,6 +2,8 @@
   li {
     width: 220px;
 
+    user-select: none;
+
     &:first-child {
       order: 1;
 

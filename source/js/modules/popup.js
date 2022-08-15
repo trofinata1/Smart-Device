@@ -14,13 +14,13 @@ function removePopupAndListeners() {
 
   const activeModals = document.querySelectorAll('.is-active');
   activeModals.forEach((item) => {
+    if (document.querySelector('.scroll-lock')) {
+      document.querySelector('.scroll-lock').style.padding = '0';
+      document.querySelector('.scroll-lock').classList.remove('scroll-lock');
+    }
+    // item.style.padding = '0';
     item.classList.remove('is-active');
   });
-
-  if (document.querySelector('.scroll-lock')) {
-    document.querySelector('.scroll-lock').style.padding = '0';
-    document.querySelector('.scroll-lock').classList.remove('scroll-lock');
-  }
 }
 
 function onDocumentClick() {

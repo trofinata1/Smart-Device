@@ -19,11 +19,17 @@ const onFormSubmit = (evt) => {
   const formData = new FormData(evt.target);
   const inputName = evt.target.querySelector('[type="text"]');
   const inputTel = evt.target.querySelector('[type="tel"]');
+  const inputMessage = document.querySelector('textarea');
 
   if (inputName.checkValidity() && inputTel.checkValidity()) {
 
     blockSubmitButton();
     sendData(SENDING_DATA_URL, onSuccessSubmit, onErrorSubmit, formData);
+
+    localStorage.name = inputName.value;
+    localStorage.tel = inputTel.value;
+    localStorage.email = inputMessage.value;
+
     if (document.querySelector('[data-modal="feedback"]')) {
       const feedbackActive = document.querySelector('[data-modal="feedback"]');
       feedbackActive.classList.remove('is-active');
@@ -44,4 +50,3 @@ export const interactWithForm = () => {
     item.addEventListener('reset', onFormReset);
   });
 };
-

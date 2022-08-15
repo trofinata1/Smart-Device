@@ -9,6 +9,8 @@
     <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -25,7 +27,7 @@
               <use xlink:href="img/sprite_auto.svg#logo"></use>
             </svg>
           </a>
-          <ul>
+          <ul class="contacts-list">
             <li>
               <a href="mailto:info@sd.ru">
                 <svg width="21" height="20" role="img" focusable="false" aria-hidden="true">
@@ -101,7 +103,7 @@
               </div>
             </div>
             <div class="about__content">
-              <h2>О компании</h2>
+              <h2>О&nbsp;компании</h2>
               <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
               <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class="hidemobile" id="hidden-in-about-block">Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
               <p class="is-hidden">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
@@ -199,13 +201,13 @@
         <section class="query" id="query">
           <div class="container">
             <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-              <h2>Остались вопросы? Задайте их нам!</h2>
+              <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
               <p>Мы проконсультируем Вас бесплатно</p>
               <div>
                 <div class="form__field">
-                  <input type="text" name="name" id="name" placeholder="Имя" required pattern="[a-zA-Z]+">
+                  <input type="text" name="name" id="name" placeholder="Имя" required pattern="[a-zA-Zа-яА-Я]+">
                   <label for="name" class="visually-hidden">Укажите имя.</label>
-                  <p class="form__error">В имени должны быть только латинские буквы</p>
+                  <p class="form__error">В имени должны быть только буквы</p>
                 </div>
                 <div class="form__field">
                   <input type="tel" name="tel" id="tel" placeholder="Телефон" required data-phone-pattern>
@@ -323,7 +325,7 @@
             <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
             <div>
               <div class="form__field">
-                <input type="text" name="name" id="name-modal" placeholder="Имя" required  pattern="[a-zA-Z]+">
+                <input type="text" name="name" id="name-modal" placeholder="Имя" required  pattern="[a-zA-Zа-яА-Я]+">
                 <label for="name-modal" class="visually-hidden">Укажите имя.</label>
                 <p class="form__error">В имени должны быть только латинские буквы</p>
               </div>

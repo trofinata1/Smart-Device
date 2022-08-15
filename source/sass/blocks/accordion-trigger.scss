@@ -15,7 +15,7 @@
     }
   }
 
-  &--with-js {
+  &.with-js {
     svg {
       @include vp-767 {
         display: block;
