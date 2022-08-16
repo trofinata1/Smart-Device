@@ -849,6 +849,7 @@ button,
   background-color: #00b2ff;
   border-radius: 3px 0 0 0;
   content: "›";
+  pointer-events: none;
 }
 
 .catalog-list a {
@@ -857,7 +858,7 @@ button,
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 50px 140px 10px 40px;
+  padding: 50px 40px 10px 40px;
   background-color: rgba(4, 24, 39, 0.5);
 }
 
@@ -868,6 +869,7 @@ button,
   font-size: 20px;
   line-height: 30px;
   color: #ffffff;
+  overflow: hidden;
 }
 
 .contacts div {
@@ -1049,6 +1051,7 @@ button,
   width: 275px;
   margin: 0 0 20px;
   padding: 15px;
+  color: #041827;
 }
 
 .form input[type="checkbox"] {
@@ -1799,11 +1802,7 @@ button,
   }
 
   .catalog-list a {
-    padding: 35px 140px 10px 43px;
-  }
-
-  .catalog-list h3 {
-    max-width: 150px;
+    padding: 35px 40px 10px 43px;
   }
 
   .contacts div {
@@ -2124,6 +2123,7 @@ button,
   .accordion-trigger.with-js svg {
     display: block;
     margin: -4px 0 0;
+    pointer-events: none;
   }
 
   .accordion-trigger.with-js.is-active svg {
@@ -2178,7 +2178,6 @@ button,
   }
 
   .catalog-list h3 {
-    max-width: 135px;
     font-size: 18px;
   }
 
@@ -2227,14 +2226,21 @@ button,
   .features ul {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
-    -ms-grid-rows: (340px)[2] (325px)[2];
-    grid-template-rows: repeat(2, 340px) repeat(2, 325px);
   }
 
   .features-list li {
     width: 100%;
-    min-height: auto;
     padding: 30px 30px 35px 25px;
+  }
+
+  .features-list li:first-child,
+  .features-list li:nth-child(2) {
+    min-height: 340px;
+  }
+
+  .features-list li:nth-last-child(2),
+  .features-list li:last-child {
+    min-height: 325px;
   }
 
   .features-list li:nth-last-child(2) h3,

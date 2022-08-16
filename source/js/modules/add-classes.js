@@ -1,15 +1,23 @@
 import {triggers, contents, aboutButton, hiddenBlocks, hiddenInAboutBlock} from './dom-nodes';
 
 export const addClassForAccordion = () => {
-  if (window.innerWidth < 768 && document.querySelector('.accordion-trigger')) {
 
-    triggers.forEach((trigger) => {
-      trigger.classList.add('with-js');
-    });
-    contents.forEach((content) => {
-      content.classList.add('with-js');
-    });
-  }
+  triggers.forEach((trigger) => {
+    trigger.classList.add('with-js');
+  });
+  contents.forEach((content) => {
+    content.classList.add('with-js');
+  });
+};
+
+export const removeClassForAccordion = () => {
+
+  triggers.forEach((trigger) => {
+    trigger.classList.remove('with-js');
+  });
+  contents.forEach((content) => {
+    content.classList.remove('with-js');
+  });
 };
 
 export const addClassForButton = () => {
@@ -34,4 +42,14 @@ export const addClassForHiddenInAboutBlocks = () => {
     hiddenInAboutBlock.classList.add('is-hidden');
     hiddenInAboutBlock.classList.remove('hidemobile');
   }
+};
+
+export const resizeAccordion = () => {
+  window.onresize = function () {
+    if (window.innerWidth < 768 && document.querySelector('.accordion-trigger')) {
+      addClassForAccordion();
+    } else {
+      removeClassForAccordion();
+    }
+  };
 };

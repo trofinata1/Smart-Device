@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {onAccordionClick} from './modules/accordion';
 import {onAboutButtonClick} from './modules/hidden-blocks';
 import {interactWithForm} from './modules/form.js';
-import {addClassForAccordion, addClassForButton, addClassForHiddenBlocks, addClassForHiddenInAboutBlocks} from './modules/add-classes';
+import {addClassForAccordion, addClassForButton, addClassForHiddenBlocks, addClassForHiddenInAboutBlocks, resizeAccordion} from './modules/add-classes';
 import {showTelMask} from './modules/mask';
 import {toggleModal} from './modules/dom-nodes';
 import {setInput} from './modules/modals/modals';
@@ -19,10 +19,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-  addClassForAccordion();
+
+  if (window.innerWidth < 768 && document.querySelector('.accordion-trigger')) {
+    addClassForAccordion();
+  }
+
+  resizeAccordion();
+
   addClassForButton();
   addClassForHiddenBlocks();
-  addClassForHiddenInAboutBlocks();
+  if (window.innerWidth < 768 && document.querySelector('#hidden-in-about-block')) {
+    addClassForHiddenInAboutBlocks();
+  }
 
   onAccordionClick();
   onAboutButtonClick();

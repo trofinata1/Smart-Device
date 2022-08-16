@@ -32,6 +32,7 @@
       border-radius: 3px 0 0 0;
 
       content: "›";
+      pointer-events: none;
 
       @include vp-767 {
         width: 40px;
@@ -47,12 +48,12 @@
     bottom: 0;
     left: 0;
 
-    padding: 50px 140px 10px 40px;
+    padding: 50px 40px 10px 40px;
 
     background-color: $color-black-pearl-dark-transparent;
 
     @include vp-1023 {
-      padding: 35px 140px 10px 43px;
+      padding: 35px 40px 10px 43px;
     }
 
     @include vp-767 {
@@ -69,13 +70,9 @@
     line-height: 30px;
     color: $color-default-white;
 
-    @include vp-1023 {
-      max-width: 150px;
-    }
+    overflow: hidden;
 
     @include vp-767 {
-      max-width: 135px;
-
       font-size: 18px;
     }
   }

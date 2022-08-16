@@ -36,7 +36,6 @@
 
     @include vp-767 {
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(2, min(340px)) repeat(2, min(325px));
     }
   }
 }
