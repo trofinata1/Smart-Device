@@ -30,6 +30,7 @@
     border-left: 524px solid $color-black-pearl-dark-transparent;
 
     content: "";
+    pointer-events: none;
 
     @include vp-1439 {
       left: -180px;
@@ -63,6 +64,7 @@
     z-index: 1;
 
     content: "";
+    pointer-events: none;
 
     @include retina {
       background-image: url("../img/decoration/query-bg@2x.png");

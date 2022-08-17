@@ -1,9 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {onAccordionClick} from './modules/accordion';
-import {onAboutButtonClick} from './modules/hidden-blocks';
+import {onAccordionClick, resizeAccordion} from './modules/accordion';
+import {onAboutButtonClick, resizeHiddenBlocks} from './modules/hidden-blocks';
 import {interactWithForm} from './modules/form.js';
-import {addClassForAccordion, addClassForButton, addClassForHiddenBlocks, addClassForHiddenInAboutBlocks, resizeAccordion} from './modules/add-classes';
+import {addClassForAccordion, addClassForButton, addClassForHiddenBlocks, mobileChecker} from './modules/add-classes';
 import {showTelMask} from './modules/mask';
 import {toggleModal} from './modules/dom-nodes';
 import {setInput} from './modules/modals/modals';
@@ -20,20 +20,18 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  if (window.innerWidth < 768 && document.querySelector('.accordion-trigger')) {
-    addClassForAccordion();
-  }
-
-  resizeAccordion();
-
+  addClassForAccordion();
   addClassForButton();
   addClassForHiddenBlocks();
-  if (window.innerWidth < 768 && document.querySelector('#hidden-in-about-block')) {
-    addClassForHiddenInAboutBlocks();
-  }
+
+  mobileChecker();
+
+  resizeAccordion();
+  resizeHiddenBlocks();
 
   onAccordionClick();
   onAboutButtonClick();
+
   showTelMask();
 
   if (document.querySelector('.form')) {

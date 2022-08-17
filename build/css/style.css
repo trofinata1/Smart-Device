@@ -779,12 +779,6 @@ button,
   border-radius: 3px 0 0 0;
 }
 
-.btn.with-js {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 .btn:disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -1581,6 +1575,7 @@ button,
   border-top: 400px solid rgba(4, 24, 39, 0.5);
   border-left: 524px solid rgba(4, 24, 39, 0.5);
   content: "";
+  pointer-events: none;
 }
 
 .query::before {
@@ -1594,6 +1589,7 @@ button,
   background-size: contain;
   z-index: 1;
   content: "";
+  pointer-events: none;
 }
 
 .query .container {

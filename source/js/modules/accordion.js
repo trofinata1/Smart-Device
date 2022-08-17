@@ -1,3 +1,6 @@
+import {trigger, accordionButtonWithJS} from './dom-nodes';
+import {notMobile, mobile} from './window-width';
+
 export const onAccordionClick = () => {
   if (document.querySelector('.accordion-trigger.with-js')) {
     const accordionTriggers = document.querySelectorAll('.accordion-trigger.with-js');
@@ -24,4 +27,15 @@ export const onAccordionClick = () => {
       });
     });
   }
+};
+
+
+export const resizeAccordion = () => {
+  window.onresize = function () {
+    if (mobile.matches && trigger) {
+      accordionButtonWithJS.style.display = 'inlineFlex';
+    } else if (notMobile.matches) {
+      accordionButtonWithJS.style.display = 'none';
+    }
+  };
 };

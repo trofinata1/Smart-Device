@@ -1,4 +1,5 @@
 import {triggers, contents, aboutButton, hiddenBlocks, hiddenInAboutBlock} from './dom-nodes';
+import {mobile} from './window-width';
 
 export const addClassForAccordion = () => {
 
@@ -23,6 +24,7 @@ export const removeClassForAccordion = () => {
 export const addClassForButton = () => {
   if (document.querySelector('.about__button')) {
     aboutButton.classList.add('btn', 'with-js');
+    aboutButton.style.display = 'inline-flex';
   }
 };
 
@@ -36,20 +38,12 @@ export const addClassForHiddenBlocks = () => {
 };
 
 export const addClassForHiddenInAboutBlocks = () => {
-  if (window.innerWidth < 768 && document.querySelector('#hidden-in-about-block')) {
-
-    hiddenInAboutBlock.classList.add('is-hidden', 'with-js');
-    hiddenInAboutBlock.classList.add('is-hidden');
-    hiddenInAboutBlock.classList.remove('hidemobile');
-  }
+  hiddenInAboutBlock.classList.add('is-hidden', 'with-js');
+  hiddenInAboutBlock.classList.add('hidemobile');
 };
 
-export const resizeAccordion = () => {
-  window.onresize = function () {
-    if (window.innerWidth < 768 && document.querySelector('.accordion-trigger')) {
-      addClassForAccordion();
-    } else {
-      removeClassForAccordion();
-    }
-  };
+export const mobileChecker = () => {
+  if (mobile.matches && hiddenInAboutBlock) {
+    addClassForHiddenInAboutBlocks();
+  }
 };
