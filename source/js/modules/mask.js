@@ -1,5 +1,7 @@
+import {telInputs} from './dom-nodes';
+
 export const showTelMask = () => {
-  if (document.querySelector('#tel')) {
+  if (document.querySelector('[name="tel"]')) {
 
     const eventCallback = function (e) {
       let el = e.target;
@@ -11,12 +13,33 @@ export const showTelMask = () => {
       let def = matrix.replace(/\D/g, '');
       let val = e.target.value.replace(/\D/g, '');
 
-      if (clearVal !== 'false' && e.type === 'blur') {
-        if (val.length < matrix.match(/([\_\d])/g).length) {
-          e.target.value = '';
-          return;
+
+      telInputs.forEach(() => {
+        const currentForm = e.target.closest('form');
+        const errorForm = currentForm.querySelector('[data-phone-error]');
+
+        if (clearVal !== 'false' && e.type === 'blur') {
+
+          if (val.length < matrix.match(/([\_\d])/g).length) {
+            errorForm.style.display = 'block';
+            return;
+          }
         }
-      }
+
+      });
+
+      telInputs.forEach(() => {
+
+        const currentForm = e.target.closest('form');
+        const errorForm = currentForm.querySelector('[data-phone-error]');
+
+        e.target.onfocus = function () {
+          if (errorForm.style.display === 'block') {
+            errorForm.style.display = 'none';
+          }
+        };
+      });
+
 
       if (def.length >= val.length) {
         val = def;

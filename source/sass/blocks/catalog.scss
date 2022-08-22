@@ -54,9 +54,8 @@
     position: relative;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, 350px);
-    grid-template-rows: repeat(auto-fill, min(650px));
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     gap: 85px;
 
     margin: 0;
@@ -67,13 +66,13 @@
     list-style-type: none;
 
     @include vp-1023 {
-      grid-template-columns: repeat(auto-fill, 670px);
-      grid-template-rows: repeat(auto-fill, min(250px));
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 250px);
       gap: 30px;
     }
 
     @include vp-767 {
-      grid-template-columns: repeat(auto-fill, 270px);
+      grid-template-rows: repeat(3, auto);
     }
   }
 }

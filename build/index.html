@@ -205,14 +205,14 @@
               <p>Мы проконсультируем Вас бесплатно</p>
               <div>
                 <div class="form__field">
-                  <input type="text" name="name" id="name" placeholder="Имя" required pattern="[a-zA-Zа-яА-Я]+">
+                  <input type="text" name="name" id="name" placeholder="Имя" required pattern="[^0-9]+">
                   <label for="name" class="visually-hidden">Укажите имя.</label>
                   <p class="form__error">В имени должны быть только буквы</p>
                 </div>
                 <div class="form__field">
                   <input type="tel" name="tel" id="tel" placeholder="Телефон" required data-phone-pattern>
+                  <p class="form__error" data-phone-error>Укажите телефон в формате +7(***)****** (только 10 цифр)</p>
                   <label for="tel" class="visually-hidden">Укажите телефон.</label>
-                  <p class="form__error">Укажите телефон в формате +7********* (только цифры)</p>
                 </div>
                 <div class="form__field">
                   <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
@@ -279,7 +279,7 @@
                 <a href="#">Продукты</a>
               </li>
               <li>
-                <a href="#">Производство печатных плат</a>
+                <a href="#">Производство печатных<br>плат</a>
               </li>
               <li>
                 <a href="#">Монтаж печатных плат</a>
@@ -325,14 +325,14 @@
             <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
             <div>
               <div class="form__field">
-                <input type="text" name="name" id="name-modal" placeholder="Имя" required  pattern="[a-zA-Zа-яА-Я]+">
+                <input type="text" name="name" id="name-modal" placeholder="Имя" required pattern="[^0-9]+">
                 <label for="name-modal" class="visually-hidden">Укажите имя.</label>
                 <p class="form__error">В имени должны быть только латинские буквы</p>
               </div>
               <div class="form__field">
                 <input type="tel" name="tel" id="tel-modal" placeholder="Телефон" required data-phone-pattern>
+                <p class="form__error" data-phone-error>Укажите телефон в формате +7(***)****** (только 10 цифр)</p>
                 <label for="tel-modal" class="visually-hidden">Укажите телефон.</label>
-                <p class="form__error">Укажите телефон в формате +7********* (только цифры)</p>
               </div>
               <div class="form__field">
                 <textarea name="question" id="question-modal" placeholder="Ваш вопрос"></textarea>

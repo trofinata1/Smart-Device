@@ -1,63 +1,11 @@
 .main-nav {
   li {
-    width: 220px;
+    margin: 0 0 8px;
 
     user-select: none;
 
-    &:first-child {
-      order: 1;
-
-      @include vp-1023 {
-        order: initial;
-      }
-    }
-
-    &:nth-child(2) {
-      order: 3;
-
-      @include vp-1023 {
-        order: initial;
-      }
-    }
-
-    &:nth-child(3) {
-      order: 5;
-
-      @include vp-1023 {
-        order: initial;
-      }
-    }
-
     &:nth-child(4) {
-      order: 7;
-
-      @include vp-1023 {
-        order: initial;
-      }
-    }
-
-    &:nth-child(5) {
-      order: 2;
-
-      @include vp-1023 {
-        order: initial;
-      }
-    }
-
-    &:nth-child(6) {
-      order: 4;
-
-      @include vp-1023 {
-        order: initial;
-      }
-    }
-
-    &:last-child {
-      order: 6;
-
-      @include vp-1023 {
-        order: initial;
-      }
+      break-before: avoid;
     }
   }
 }
