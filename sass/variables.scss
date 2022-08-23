@@ -1,0 +1,94 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent-70:              rgba(255, 255, 255, 0.7);
+$color-transparent-80:              rgba(255, 255, 255, 0.8);
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-neon-blue:                     #2c39f2;
+$color-torch-red:                     #ff1553;
+$color-deep-sky-blue:                 #00b2ff;
+$color-deep-sky-blue-bright:          #00b3ff;
+$color-alice-blue:                    #f8fdff;
+$color-alice-blue-gray:               #f2f5f7;
+$color-alice-blue-transparent:        rgba(248, 253, 255, 0.7);
+$color-black-pearl:                   #041427;
+$color-black-pearl-transparent:       rgba(4, 20, 39, 0.15);
+$color-black-pearl-dark:              #041827;
+$color-black-pearl-dark-transparent:  rgba(4, 24, 39, 0.5);
+$color-black-pearl-extra-transparent: rgba(3, 16, 27, 0.7);
+$color-whisper:                       #ebebeb;
+
+
+// Outline
+$outline-alice-blue-gray:             1px solid $color-alice-blue-gray;
+$outline-deep-sky-blue:               1px solid $color-deep-sky-blue;
+$outline-whisper:                     1px solid $color-whisper;
+
+// Border
+$border-default-white:                1px solid $color-default-white;
+$border-deep-sky-blue-wide:           5px solid $color-deep-sky-blue;
+$border-alice-blue-transparent:       1px solid $color-alice-blue-transparent;
+
+// Gradient
+$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$black-to-top:                      linear-gradient(180deg, $color-black-pearl-dark 84.9%, rgba(4, 24, 39, 0) 100%);
+$gray-to-top:                       linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
+
+// Shadow
+$shadow-transparent:                 0 4px 4px rgba(0, 0, 0, 0.25);
+
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default:                        16px;
+
+// у некоторых шрифтов в ios возникают проблемы с символом рубля
+// https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-rouble:                         "Rouble", "Arial", sans-serif;
+$ff-roboto-condensed:               "Roboto Condensed", "Arial", sans-serif;
+$ff-PT-Mono:                        "PT Mono", "Courier New", monospace;
+
+$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600:                         0.6s $tf-default;
+
+$trans-matrix:                      matrix(-1, 0, 0, 1, 0, 0);
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            320px;
+$vp-375:                            375px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1105:                           1105px;
+$vp-1184:                           1184px;
+$vp-1280:                           1280px;
+$vp-1360:                           1360px;
+$vp-1440:                           1440px;
+$vp-1500:                           1500px;
+$vp-1700:                           1700px;
+$vp-1920:                           1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

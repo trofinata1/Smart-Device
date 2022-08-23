@@ -1,0 +1,11 @@
+.main-nav {
+  li {
+    margin: 0 0 8px;
+
+    user-select: none;
+
+    &:nth-child(4) {
+      break-before: avoid;
+    }
+  }
+}
